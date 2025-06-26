@@ -44,7 +44,6 @@ def occupy_mem(cuda_device, mem_ratio=0.9):
     del x
     time.sleep(5)
 
-
 def gpu_mem_usage():
     """
     Compute the GPU memory usage for the current device (MB).

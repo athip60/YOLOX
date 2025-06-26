@@ -1,0 +1,5 @@
+set PATH=C:\Users\Admin\Documents\Work\passport\[yolox] train-passport-detection\yolox-env\Lib\site-packages\torch\lib;C:\Users\Admin\Documents\Work\passport\[yolox] train-passport-detection\yolox-env\Scripts
+python tools/train.py -f exps/default/yolox_nano_passport.py -d 1 -b 16 --fp16 -o
+
+
+python tools/demo.py image -f exps/default/yolox_nano_passport.py -c ./YOLOX_outputs/yolox_nano_passport/best_ckpt.pth --path predict_image2/ --conf 0.6 --nms 0.5 --tsize 640 --save_result --device gpu 

@@ -350,6 +350,7 @@ class Exp(BaseExp):
         return trainer
 
     def eval(self, model, evaluator, is_distributed, half=False, return_outputs=False):
+        evaluator.use_fast_impl = False
         return evaluator.evaluate(model, is_distributed, half, return_outputs=return_outputs)
 
 
